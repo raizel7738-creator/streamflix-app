@@ -1,0 +1,355 @@
+/* src/styles/landing.css */
+
+.landing-page {
+  background-color: #000;
+  color: white;
+  min-height: 100vh;
+}
+
+/* --- Header --- */
+.landing-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 20px 3.5rem;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, transparent 100%);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.logo h1 {
+  color: #e50914;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.language-select {
+  background: rgba(0,0,0,0.4);
+  border: 1px solid #aaa;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.sign-in-btn {
+  background: #e50914;
+  color: white;
+  border: none;
+  padding: 7px 17px;
+  border-radius: 3px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* --- Hero Section --- */
+.hero-landing {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* UPDATED: Using the background image from the provided GitHub link */
+  background: url("https://github.com/JosinJojy/Netflix-reactjs/blob/main/src/images/WelcomePageBanner.jpg?raw=true") center/cover no-repeat;
+  border-bottom: 8px solid #222;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  background-image: linear-gradient(to top, rgba(0,0,0,0.8) 0, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 950px;
+  padding: 0 75px;
+}
+
+.hero-title {
+  font-size: 3.125rem;
+  font-weight: 900;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.hero-subtitle {
+  font-size: 1.625rem;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+
+.hero-cta-text {
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 0 10%;
+  margin-bottom: 20px;
+}
+
+.email-signup {
+  display: flex;
+  justify-content: center;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.email-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #8c8c8c;
+  background: rgba(22,22,22,0.7);
+  color: white;
+  border-radius: 2px 0 0 2px;
+  min-height: 56px;
+}
+
+.get-started-btn {
+  background: #e50914;
+  color: white;
+  border: none;
+  padding: 0 1.5em;
+  font-size: 1.625rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 0 2px 2px 0;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+/* --- Features Section --- */
+.features {
+  padding: 70px 45px;
+  border-top: 8px solid #222;
+  background: #000;
+}
+
+.features-title {
+  font-size: 3.125rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.feature-card h3 {
+  font-size: 1.625rem;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.feature-icon-container {
+  margin-top: 20px;
+  font-size: 3rem;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-icon-container svg {
+  width: 50px;
+  height: 50px;
+}
+
+/* --- FAQ Section --- */
+.faq-section {
+  padding: 70px 45px;
+  border-top: 8px solid #222;
+  background: #000;
+}
+
+.faq-container {
+  max-width: 815px;
+  margin: 0 auto;
+}
+
+.faq-title {
+  font-size: 3.125rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.faq-item {
+  margin-bottom: 8px;
+}
+
+.faq-question {
+  width: 100%;
+  background: #2d2d2d;
+  color: white;
+  border: none;
+  padding: 24px;
+  font-size: 1.625rem;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-icon {
+  font-size: 36px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.faq-icon.open {
+  transform: rotate(45deg);
+}
+
+.faq-answer-container {
+  background: #2d2d2d;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+  border-top: 1px solid black;
+}
+
+.faq-answer-content {
+  padding: 24px;
+}
+
+.faq-answer-content p {
+  font-size: 1.625rem;
+  line-height: 1.4;
+}
+
+/* --- Footer --- */
+.landing-footer {
+  padding: 70px 45px;
+  border-top: 8px solid #222;
+  background: #000;
+  color: #737373;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-content > p {
+  margin-bottom: 30px;
+}
+
+.footer-content a {
+  color: #737373;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.link-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.link-column a {
+  margin-bottom: 12px;
+  font-size: 13px;
+}
+
+.country {
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+/* --- Modal --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.sign-in-modal {
+  background: rgba(0,0,0,0.85);
+  padding: 60px 68px 40px;
+  border-radius: 4px;
+  width: 450px;
+  max-width: 90vw;
+}
+
+.sign-in-modal h2 {
+  font-size: 32px;
+  margin-bottom: 28px;
+}
+
+.sign-in-form input {
+  background: #333;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  padding: 16px 20px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.sign-in-submit {
+  background: #e50914;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 16px;
+  cursor: pointer;
+  margin-top: 24px;
+  width: 100%;
+}
