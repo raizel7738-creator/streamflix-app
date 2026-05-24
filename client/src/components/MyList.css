@@ -1,0 +1,122 @@
+.mylist {
+    color: white;
+    padding: 80px 60px 40px;
+    min-height: 100vh;
+}
+
+.mylist h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.loading {
+    font-size: 1.2rem;
+    color: #999;
+    text-align: center;
+    padding: 40px;
+}
+
+.empty_list {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.empty_list p {
+    font-size: 1.5rem;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.empty_subtitle {
+    font-size: 1.1rem !important;
+    color: #666 !important;
+}
+
+.mylist_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.mylist_item {
+    background: #181818;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.mylist_item:hover {
+    transform: scale(1.05);
+}
+
+.mylist_poster {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.mylist_info {
+    padding: 20px;
+}
+
+.mylist_info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.mylist_rating {
+    color: #46d369;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.mylist_overview {
+    font-size: 0.9rem;
+    color: #ccc;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.mylist_remove {
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+}
+
+.mylist_remove:hover {
+    background: #f40612;
+}
+
+@media (max-width: 768px) {
+    .mylist {
+        padding: 60px 20px 20px;
+    }
+
+    .mylist h1 {
+        font-size: 2rem;
+    }
+
+    .mylist_grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .mylist_poster {
+        height: 300px;
+    }
+}
