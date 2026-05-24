@@ -102,11 +102,11 @@ app.use((err, req, res, next) => {
 // Start Server (for local development)
 const PORT = process.env.PORT || 5000;
 
-// For Vercel serverless deployment
-if (process.env.VERCEL) {
-  module.exports = app;
-} else {
-  // For local development
+// Always export for Vercel
+module.exports = app;
+
+// Only listen if not in Vercel environment
+if (!process.env.VERCEL && require.main === module) {
   app.listen(PORT, () => {
     console.log(`🚀 Server running on port ${PORT}`);
     console.log(`📍 Environment: ${process.env.NODE_ENV || 'development'}`);
